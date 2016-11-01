@@ -1,0 +1,10 @@
+<%@ control language="C#" autoeventwireup="true" inherits="__ASPNET_INHERITS" %>
+<%@ Register TagPrefix="cms" TagName="SalesForceError" Src="~/CMSModules/ContactManagement/Controls/UI/SalesForce/Error.ascx" %>
+<%@ Register TagPrefix="cms" TagName="UniSelector" Src="~/CMSAdminControls/UI/UniSelector/UniSelector.ascx" %>
+<cms:CMSUpdatePanel ID="MainUpdatePanel" runat="server">
+<ContentTemplate>
+    <cms:SalesForceError ID="SalesForceError" runat="server" EnableViewState="false" />
+    <p id="MessageLabel" class="form-control-text" runat="server" enableviewstate="false" visible="false"></p>
+    <cms:UniSelector ID="ScoreSelector" runat="server" ObjectType="om.score" SelectionMode="SingleDropDownList" AllowEmpty="true" ResourcePrefix="sf.score" Visible="false"></cms:UniSelector>
+</ContentTemplate>
+</cms:CMSUpdatePanel>
